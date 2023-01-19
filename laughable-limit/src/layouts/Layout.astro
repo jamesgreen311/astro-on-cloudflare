@@ -18,7 +18,18 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<header class="header">
+			<h1>Walking On The Edge Studio</h1>
+		</header>
+		<header>
+			<h2>James Green Fine Art</h2>					
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer class="footer">
+			James Green Fine Art - Walking On The Edge Studio &copy; 2023
+		</footer>
 	</body>
 </html>
 <style is:global>
@@ -28,6 +39,8 @@ const { title } = Astro.props;
 		--secondary-color: rgb(218, 98, 196);
 		--accent-color-2: rgb(158, 218, 98);
 		--tertiary-color: rgb(18,4,68);
+		--light-text-color: rgb(226, 226, 226);
+		--dark-text-color: var(var(--tertiary-color));
 		--accent-gradient: linear-gradient(90deg, rgb(var(--accent)), var(--secondary-color) 30%, rgb(226, 226, 226) 60%);
 		--text-gradient: linear-gradient(180deg, rgb(var(--accent)), rgb(var(--secondary-color)) 30%, rgb(var(--tertiary-color)) 60%);
 	}
@@ -35,8 +48,43 @@ const { title } = Astro.props;
 		font-family: 'Merriweather', serif;
 		background-color: rgb(246, 246, 246);
 	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+		line-height: 1em;
+
+		color: var(--primary-color);
+		/* border-image: linear-gradient(180deg, var(--secondary-color), var(--primary-color)) 1; */
+		padding-left: .5rem;
+	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	header h2 {
+		padding-left: 1.5rem;
+	}
+	.header {
+		border-left-style: solid;
+		border-left-width: .5rem;
+		border-left-color: var(--accent-color-2);
+		padding-top: 2rem;
+	}
+
+	.footer {
+		border-top-width: 10px;
+		border-top-style: solid;
+		border-top-color: var(--accent-color-2);
+		padding: 2rem;
+		background-color: var(--primary-color);
+		color: var(--light-text-color);
+		text-align: right;
 	}
 </style>
