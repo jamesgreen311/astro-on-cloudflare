@@ -11,7 +11,9 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -22,11 +24,16 @@ const { title } = Astro.props;
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--primary-color: rgb(var(--accent));
+		--secondary-color: rgb(218, 98, 196);
+		--accent-color-2: rgb(158, 218, 98);
+		--tertiary-color: rgb(18,4,68);
+		--accent-gradient: linear-gradient(90deg, rgb(var(--accent)), var(--secondary-color) 30%, rgb(226, 226, 226) 60%);
+		--text-gradient: linear-gradient(180deg, rgb(var(--accent)), rgb(var(--secondary-color)) 30%, rgb(var(--tertiary-color)) 60%);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		font-family: 'Merriweather', serif;
+		background-color: rgb(246, 246, 246);
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
