@@ -42,28 +42,40 @@ const { title } = Astro.props
 	:root {
 		/* Color Scheme 1 */
 		/* CSS HSL */
-		--english-violet: hsl(278, 22%, 32%);
+/* 		--english-violet: hsl(278, 22%, 32%);
 		--french-lilac: hsla(279, 22%, 47%, 1);
 		--amaranth-pink: hsla(340, 79%, 79%, 1);
 		--apricot: hsla(22, 100%, 86%, 1);
 		--olivine: hsla(84, 37%, 59%, 1);
-		--paolo-veronese-green: hsla(163, 75%, 34%, 1);
+		--paolo-veronese-green: hsla(163, 75%, 34%, 1); */
 
-		--accent: 124, 58, 237;
-		--color-1: 34, 97, 62;
-		--primary-color: var(--english-violet);
-		--secondary-color: var(--french-lilac);
-		--tertiary-color: var(--amaranth-pink)
-		--accent-color-1: var(--apricot);
+		/* Dances with Rain scheme */
+
+		/* CSS HSL */
+		--byzantium: hsla(309, 43%, 34%, 1);
+		--light-background-color: hsl(0, 0%, 95.25%);
+		--dark-background-color: hsl(244, 72%, 16%);
+		--gainsboro: hsla(195, 6%, 86%, 1);
+		--maximum-purple: hsla(283, 33%, 42%, 1);
+		--light-periwinkle: hsla(233, 28%, 78%, 1);
+		--glaucous: hsla(220, 39%, 55%, 1);
+		--amaranth-pink: hsla(340, 79%, 79%, 1);
+		--olivine: hsla(84, 37%, 59%, 1);
+
+		/* --accent: 124, 58, 237;
+		--color-1: 34, 97, 62; */
+		--primary-color: var(--maximum-purple);
+		--secondary-color: var(--light-periwinkle);
+		--tertiary-color: var(--glaucous);
+		--accent-color-1: var(--amaranth-pink);
 		--accent-color-2: var(--olivine);
-		--accent-color-3: var(--paolo-veronese-green);
-		--light-text-color: rgb(226, 226, 226);
-		--dark-text-color: var(--tertiary-color);
+		--light-text-color: var(--gainsboro);
+		--dark-text-color: var(--byzantium);
 		--accent-gradient: linear-gradient(
 			90deg,
-			rgb(var(--accent)),
+			var(--accent-color-1),
 			var(--secondary-color) 30%,
-			rgb(226, 226, 226) 60%
+			var(--tertiary-color) 60%
 		);
 		--text-gradient: linear-gradient(
 			180deg,
@@ -74,7 +86,8 @@ const { title } = Astro.props
 	}
 	html {
 		font-family: "Merriweather", serif;
-		background-color: rgb(246, 246, 246);
+		background-color: var(--light-background-color);
+		color: var(--dark-text-color);
 	}
 	h1 {
 		font-size: 3rem;
@@ -94,10 +107,12 @@ const { title } = Astro.props
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 100ch;
+		min-width: 40ch;
 	}
 	header h2 {
 		padding-left: 1.5rem;
+		color: var(--dark-background-color);
 	}
 	.header {
 		border-left-style: solid;
