@@ -1,21 +1,46 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
 ---
 
 <Layout title="Welcome to Walking On The Edge Studio">
-		<div class="about">
-			<h2>Artist Bio & Statement</h2>
-			<p>James is an abstract artist living in the Richmond area. His work is influenced by elements of nature and the outdoors.</p>
-			<p>
-				His primary mediums are oils with cold wax, acrylics and encaustics. By working areas of texture into each of the many layers he builds depth and volume on the painting surface that invokes a visually stimulating and tactile response for the viewer.
-			</p>
-				
-			<p>His approach to painting is very spontaneous and expressive as he endeavors to create a balance between chaos and order.</p>
-			
-			<p>He is an exhibiting member of the Metropolitan Richmond Artists Association and a member of its board.</p>
-		</div>
-		<!-- <ul role="list" class="link-card-grid">
+	<div class="photo">
+		<a
+			data-flickr-embed="true"
+			href="https://www.flickr.com/photos/walkingontheedgestudio/52615788969/in/dateposted-public/"
+			title="Winter Carnival"
+			target="_blank"
+			><img
+				src="https://live.staticflickr.com/65535/52615788969_7e5e6f3d27_h.jpg"
+				alt="Winter Carnival"
+			/></a
+		>
+	</div>
+	<div class="about">
+		<h2>Artist Bio & Statement</h2>
+		<p>
+			James is an abstract artist living in the Richmond area. His work is
+			influenced by elements of nature and the outdoors.
+		</p>
+		<p>
+			His primary mediums are oils with cold wax, acrylics and encaustics. By
+			working areas of texture into each of the many layers he builds depth
+			and volume on the painting surface that invokes a visually stimulating
+			and tactile response for the viewer.
+		</p>
+
+		<p>
+			His approach to painting is very spontaneous and expressive as he
+			endeavors to create a balance between chaos and order.
+		</p>
+
+		<p>
+			He is an exhibiting member of the Metropolitan Richmond Artists
+			Association and a member of its board.
+		</p>
+	</div>
+
+	<!-- <ul role="list" class="link-card-grid">
 			<Card
 				href="https://astro.build/integrations/"
 				title="Integrations"
@@ -32,12 +57,9 @@ import Card from '../components/Card.astro';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul> -->
-
 </Layout>
 
 <style>
-
-
 	.text-gradient {
 		background-image: var(--text-gradient);
 		-webkit-background-clip: text;
@@ -45,7 +67,6 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions,
 	.about {
 		line-height: 1.6;
 		margin: 1rem 0;
@@ -53,17 +74,6 @@ import Card from '../components/Card.astro';
 		background-color: white;
 		padding: 1rem;
 		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		/* background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent)); */
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
 	}
 
 	.about h2 {
@@ -82,5 +92,14 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+	img {
+		border: solid 3px black;
+		border-image: linear-gradient(
+			to bottom,
+			black,
+			darkgray 30%,
+			#ebe9ea 60%
+		) 1;
 	}
 </style>

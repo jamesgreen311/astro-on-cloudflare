@@ -1,0 +1,17 @@
+export interface Props {
+   link: string;
+   imageSource: string;
+   title: string;
+}
+
+const {link, imageSource, title} = Astro.props;
+
+<a
+data-flickr-embed="true"
+href="{link}"
+title="{title}"
+><img
+   src="{imageSource}"
+   alt="{title}"
+/></a
+>

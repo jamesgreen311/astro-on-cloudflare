@@ -27,7 +27,7 @@ const { title } = Astro.props
 		<header class="header">
 			<h1>Walking On The Edge Studio</h1>
 		</header>
-		<header>
+		<header class="subheader">
 			<h2>James Green Fine Art</h2>
 		</header>
 		<main>
@@ -36,39 +36,31 @@ const { title } = Astro.props
 		<footer class="footer">
 			James Green Fine Art - Walking On The Edge Studio &copy; 2023
 		</footer>
+		<!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
 	</body>
 </html>
 <style is:global>
 	:root {
-		/* Color Scheme 1 */
-		/* CSS HSL */
-/* 		--english-violet: hsl(278, 22%, 32%);
-		--french-lilac: hsla(279, 22%, 47%, 1);
-		--amaranth-pink: hsla(340, 79%, 79%, 1);
-		--apricot: hsla(22, 100%, 86%, 1);
-		--olivine: hsla(84, 37%, 59%, 1);
-		--paolo-veronese-green: hsla(163, 75%, 34%, 1); */
-
 		/* Dances with Rain scheme */
-
-		/* CSS HSL */
 		--byzantium: hsla(309, 43%, 34%, 1);
-		--light-background-color: hsl(0, 0%, 95.25%);
+		--light-background-color: hsla(0, 0%, 95%, 1);
 		--dark-background-color: hsl(244, 72%, 16%);
 		--gainsboro: hsla(195, 6%, 86%, 1);
 		--maximum-purple: hsla(283, 33%, 42%, 1);
 		--light-periwinkle: hsla(233, 28%, 78%, 1);
 		--glaucous: hsla(220, 39%, 55%, 1);
 		--amaranth-pink: hsla(340, 79%, 79%, 1);
+
+		/* Accent colors added */
+		--tangerine: hsla(30, 95%, 57%, .95);
+		--lemon-chiffon: rgba(255, 247, 0, 0.95);
 		--olivine: hsla(84, 37%, 59%, 1);
 
-		/* --accent: 124, 58, 237;
-		--color-1: 34, 97, 62; */
 		--primary-color: var(--maximum-purple);
 		--secondary-color: var(--light-periwinkle);
 		--tertiary-color: var(--glaucous);
 		--accent-color-1: var(--amaranth-pink);
-		--accent-color-2: var(--olivine);
+		--accent-color-2: var(--lemon-chiffon);
 		--light-text-color: var(--gainsboro);
 		--dark-text-color: var(--byzantium);
 		--accent-gradient: linear-gradient(
@@ -90,13 +82,12 @@ const { title } = Astro.props
 		color: var(--dark-text-color);
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 1.75rem;
 		font-weight: 800;
 		margin: 0;
 		line-height: 1em;
 
 		color: var(--primary-color);
-		/* border-image: linear-gradient(180deg, var(--secondary-color), var(--primary-color)) 1; */
 		padding-left: 0.5rem;
 	}
 	code {
@@ -110,21 +101,28 @@ const { title } = Astro.props
 		max-width: 100ch;
 		min-width: 40ch;
 	}
-	header h2 {
+	.header h2 {
 		padding-left: 1.5rem;
+		margin-top: .5rem;
 		color: var(--dark-background-color);
 	}
 	.header {
 		border-left-style: solid;
 		border-left-width: 0.5rem;
-		border-left-color: var(--accent-color-2);
+		border-left-color: var(--accent-color-1);
 		padding-top: 2rem;
+		background-color: var(--light-periwinkle);
 	}
-
+	.subheader {
+		background-color: var(--tertiary-color);
+		color: var(--light-text-color);
+		padding: .5rem 1.5rem;
+		font-size: 1rem;
+	}
 	.footer {
 		border-top-width: 10px;
 		border-top-style: solid;
-		border-top-color: var(--accent-color-2);
+		border-top-color: var(--accent-color-1);
 		padding: 2rem;
 		background-color: var(--primary-color);
 		color: var(--light-text-color);
