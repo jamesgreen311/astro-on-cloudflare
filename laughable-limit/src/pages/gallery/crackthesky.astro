@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro"
+---
+
+<Layout title="Crack The Sky">
+   <section>
+      <h1>Crack The Sky</h1>
+      <h2>From of the Broken series</h2>
+      <img
+         src="/assets/gallery/crack-the-sky-640.png"
+         alt="Crack The Sky Art Work"
+      />
+      <table class="border-separate border-spacing-4">
+         <tbody>
+            <tr>
+               <td>Size</td>
+               <td>24"x24"</td>
+            </tr>
+            <tr>
+               <td>Medium</td>
+               <td>Oil and cold wax medium</td>
+            </tr>
+            <tr>
+               <td>Base</td>
+               <td>Cradled birch panel</td>
+            </tr>
+         </tbody>
+      </table>
+   </section>
+</Layout>
+
+<style>
+   img {
+      border: solid .5rem black;
+      padding: 5px;
+      margin-block: 10px;
+   }
+
+   section {
+		margin: auto;
+ 		padding: 1.5rem;
+		max-width: 640px;
+		min-width: 40ch;
+	}
+
+   h2,
+   table {
+		color: hsl(0, 0%, 20%)
+	}
+</style>
