@@ -24,10 +24,10 @@ import Layout from "../layouts/Layout.astro"
             influenced by elements of nature and the outdoors.
          </p>
          <p>
-            His primary mediums are oils with cold wax, acrylics and encaustics. By
-            working areas of texture into each of the many layers he builds depth
-            and volume on the painting surface that invokes a visually stimulating
-            and tactile response for the viewer.
+            His primary mediums are oils with cold wax, acrylics and encaustics.
+            By working areas of texture into each of the many layers he builds
+            depth and volume on the painting surface that invokes a visually
+            stimulating and tactile response for the viewer.
          </p>
          <p>
             His approach to painting is very spontaneous and expressive as he
@@ -38,16 +38,24 @@ import Layout from "../layouts/Layout.astro"
             Association and a member of its board.
          </p>
       </div>
-
    </section>
 </Layout>
 
 <style>
-   .text-gradient {
-      background-image: var(--text-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+   section {
+      margin: auto;
+      padding: 1.5rem;
+      max-width: 100ch;
+      min-width: 40ch;
    }
+   .photo {
+      overflow: hidden;
+      /* border: solid 3px black; */
+      border-image: linear-gradient(to bottom, black, darkgray 30%, #ebe9ea 60%)
+         1;
+      border-radius: 0.5rem;
+   }
+
    .about {
       border: 1px solid var(--primary-color);
       background-color: white;
@@ -65,16 +73,9 @@ import Layout from "../layouts/Layout.astro"
       color: #444;
    }
 
-   img {
-      border: solid 3px black;
-      border-image: linear-gradient(to bottom, black, darkgray 30%, #ebe9ea 60%)
-         1;
+   .text-gradient {
+      background-image: var(--text-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
    }
-
-   section {
-		margin: auto;
- 		padding: 1.5rem;
-		max-width: 100ch;
-		min-width: 40ch;
-	}
 </style>
